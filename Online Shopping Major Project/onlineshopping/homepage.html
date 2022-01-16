@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Shopping</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color:#ddd2d2;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 90px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color:#d65959;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+  font-size: 30px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:rgb(250, 132, 132);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #c7bbbb;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background:#f9f9f9;
+  padding: 5px;
+  color: #d64141;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: rgb(160, 160, 160);
+  height: 375px;
+}
+
+.column a {
+  float: none;
+  color: rgb(223, 223, 223);
+  padding: 15px 25px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+}
+
+.column a:hover {
+  background-color: rgb(39, 38, 38);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+.mySlides{
+    height: 400px;
+}
+.imag{
+    position: absolute;
+    right:0px;
+    top:0px;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 100%;
+  margin-bottom:50px;
+}
+.sale{
+    padding: 10px;
+    height: 300px;
+}
+.card-img-top{
+    object-fit: fill;
+    height: 250px;
+
+}
+.button {
+bottom: 300px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: #697069;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  width: 200px;
+}
+.button a{
+    bottom: 300px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: #697069;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #0b0c0b}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+.col {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.r {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.r:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.car {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color:#9b8d8d;
+  color: white;
+  border-radius: 80px;
+}
+
+.fa {font-size:50px;}
+#footer{
+    
+    bottom: 0px;;
+    width: 100%;
+left:0px;
+    height: 2rem;
+    color: rgb(250, 254, 255);
+    background-color:rgb(119 122 125);
+    padding-bottom: 70px;
+    
+}
+
+</style>
+</head>
+<body>
+    <div class="imag">
+        <img src="ShopBizz.png" height="88px">
+      </div>
+
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">CATEGORIES
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <div class="header">
+        </div>   
+      <div class="row">
+        <div class="column">
+            <br>
+            <br>
+            <br>
+          <a href="shoe.html">SHOES</a>
+        </div>
+        <div class="column">
+          <br>
+          <br>
+          <br>
+          <a href="watches.html">WATCHES</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="phone.html">MOBILES</a>
+        </div>
+        <div class="column">
+          <a href="dress.html">CLOTHING</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+
+<section>
+    <img class="mySlides" src="t.jpg.png"
+  style="width:100%">
+  <img class="mySlides" src="https://www.sweatshop.com/features/ASICS-Find-Your-Perfect-Shoe/ASISC-FYPS-Campaign_01.jpg"
+  style="width:100%">
+  <img class="mySlides" src="image-152-11-1024x517.jpg.jfif"
+  style="width:100%">
+</section>
+<script>
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+    </script>
+    <section>
+        <div style="padding:20px"></div>
+        <div class="row">
+            <div class="column">
+              <div class="card">
+                <center><img src="https://m.media-amazon.com/images/I/61hh8wS16wL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Not available"></center>
+                <br>
+               <br>
+               <div>
+                <center><a class="button" href="https://www.amazon.in/BLIVE-Regular-Henley-Sleeve-Cotton/dp/B08PT17CZG/ref=sr_1_1?dchild=1&pf_rd_i=1968024031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_p=08b03935-0704-4bbd-9894-f9c043ef766b&pf_rd_r=14ED242DDMWS502873KP&pf_rd_s=merchandised-search-17&pf_rd_t=30901&qid=1618324663&refinements=p_36%3A-34900&rnid=4595083031&s=apparel&sr=1-1">VIEW ME</a></center>
+               </div>
+            </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <center><img src="https://m.media-amazon.com/images/I/71hlfovzbzL._AC_UL320_.jpg" width="250px" height="100px" class="card-img-top" alt="Not available"></center>
+               <br>
+               <br>
+               <div>
+                <center><a class="button" href="https://www.amazon.in/Anzarun-Peacoat-White-Running-37112805/dp/B07S9S8B2F/ref=sr_1_16?dchild=1&keywords=puma+shoes&qid=1618245118&s=shoes&sr=1-16">VIEW ME</a></center>
+               </div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <center><img src="https://m.media-amazon.com/images/I/81PqOzs-XmL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Not available"></center>
+                <br>
+                <br>
+                <div>
+                    <center><a class="button" href="https://www.amazon.in/Swisstone-BRW385-BRWN-Brown-Leather-Strap/dp/B07H3489LV/ref=sr_1_26?dchild=1&keywords=watches&qid=1618334184&smid=A2BURQ2IK0ITXD&sr=8-26">VIEW ME</a></center>
+                   </div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <center><img src="https://images-eu.ssl-images-amazon.com/images/I/41KbZZgECVL._SX300_SY300_QL70_FMwebp_.jpg" class="card-img-top" alt="Not available"></center>
+                <br>
+               <br>
+               <div>
+                <center><a class="button" href="https://www.amazon.in/OnePlus-Nord-Marble-256GB-Storage/dp/B0869855B8/ref=gbph_img_m-5_9fa4_af2fc750?smid=A35FCS7U51TK3C&pf_rd_p=8">VIEW ME</a></center>
+               </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+    </section>
+    <section>
+        <img class="sale" src="luxury-private-sales-discount-website-warehouse-luxe-digital.jpg"
+  style="width:100%">
+    </section>
+    <section>
+        <div style="padding:20px"></div>
+        <div class="row">
+            <div class="column">
+              <div class="card">
+                <center><img src="https://m.media-amazon.com/images/I/71ecRmEzkJL._AC_UL320_.jpg" width="250px" height="100px" class="card-img-top" alt="Not available"></center>
+                <br>
+                <br>
+                <div>
+                    <center><a class="button" href="https://www.amazon.in/Midnight-White-Royal-Coloured-Sports/dp/B00XWPYZM4/ref=sr_1_2?dchild=1&keywords=nike+shoes&qid=1618243618&s=shoes&sr=1-2">VIEW ME</a></center>
+                   </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <center><img src="https://m.media-amazon.com/images/I/61KSI-N-AoL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="Not available"></center>
+                <br>
+               <br>
+               <div>
+                <center><a class="button" href="https://www.amazon.in/Titan-Analog-Silver-Dial-Watch-NK1584SL03/dp/B018VZBTLY/ref=sr_1_1?dchild=1&fst=as%3Aoff&pf_rd_i=2563504031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_p=5991fe45-9f09-4c1a-a30c-b5990fafbd90&pf_rd_r=38YCEXCM6769P80YX9Y9&pf_rd_s=merchandised-search-5&qid=1618336961&refinements=p_89%3ATitan&rnid=1350388031&s=watch&sr=1-1">VIEW ME</a></center>
+               </div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <center><img src="https://images-eu.ssl-images-amazon.com/images/I/41CkKbseMGL._SX300_SY300_QL70_FMwebp_.jpg" class="card-img-top" alt="Not available"></center>
+                <br>
+               <br>
+               <div>
+                <center><a class="button" href="https://www.amazon.in/Samsung-Galaxy-Cloud-128GB-Storage/dp/B08VB2MRF8/ref=sr_1_1_sspa?dchild=1&keywords=samsung+s20&qid=1618237668&s=electronics&sr=1-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyQ1FLRDZRMDY1Vlk0JmVuY3J5cHRlZElkPUExMDAwMTk2MTFZNlI2Tjk0TEVGWCZlbmNyeXB0ZWRBZElkPUEwOTIwOTk5MUk3WFdNRE9WMlNIVyZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=">VIEW ME</a></center>
+               </div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <center><img src="https://m.media-amazon.com/images/I/81F4WvkjA3L._AC_UL320_.jpg" width="250px" height="100px" class="card-img-top" alt="Not available"></center>
+                <br>
+                <br>
+                <div>
+                    <center><a class="button" href="https://www.amazon.in/Campus-Rodeo-2-Running-Shoes-6-CG-237/dp/B07HF9SDMP/ref=sr_1_22_sspa?dchild=1&keywords=shoes&qid=1618244389&s=shoes&sr=1-22-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyMTcwMU9NSkJIRzUyJmVuY3J5cHRlZElkPUExMDI2MTY0MjMyTzRQSzZEM0E5UCZlbmNyeXB0ZWRBZElkPUEwMjMzOTU2UUlOVUI3RUdYWEhRJndpZGdldE5hbWU9c3BfbXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="">VIEW ME</a></center>
+                   </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+<section>
+    <div style="padding:80px"></div>
+    <div class="r">
+        <div class="col">
+          <div class="car">
+            <p><i class="fa fa-user"></i></p>
+            <h3>11+</h3>
+            <p>Partners</p>
+          </div>
+        </div>
+      
+        <div class="col">
+          <div class="car">
+            <p><i class="fa fa-check"></i></p>
+            <h3>55+</h3>
+            <p>Projects</p>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="car">
+            <p><i class="fa fa-smile-o"></i></p>
+            <h3>100+</h3>
+            <p>Happy Clients</p>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="car">
+            <p><i class="fa fa-coffee"></i></p>
+            <h3>100+</h3>
+            <p>Meetings</p>
+          </div>
+        </div>
+      </div>
+     </section>
+<section>
+    <div style="padding:30px"></div>
+    <footer id="footer">
+        <br>
+        <center><p>Copyright 2019-2025 shopbizz.com| All Rights Reserved </p></center>
+     </footer>
+     </section>
+</body>
+</html>
+
